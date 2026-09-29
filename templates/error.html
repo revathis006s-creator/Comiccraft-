@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - ComicCraft</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="card success-card" style="border-color: #ffcaca;">
+            <div class="success-icon" style="background: #fff0f0; color: #dc3545;">✕</div>
+            <h1>Something Went Wrong</h1>
+            <p>An error occurred while processing your comic request.</p>
+            {% if error %}
+            <div class="alert error" style="text-align: left; margin: 20px 0; word-break: break-word;">
+                {{ error }}
+            </div>
+            {% endif %}
+            <div style="margin-top: 24px;">
+                <a class="button primary" href="/">Back to Home</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

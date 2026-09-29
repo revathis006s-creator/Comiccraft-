@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Comic Export Complete</title><link rel="stylesheet" href="/static/css/styles.css"></head>
+<body><main class="page-shell"><section class="card success-card"><div class="success-icon">✓</div><h1>Comic Export Complete</h1><p>Your AI-powered comic PDF is ready.</p>
+{% if pdf_url %}<a class="button primary" href="{{ pdf_url }}" download>Download PDF</a>{% endif %}
+<a class="button secondary" href="/">Go Create Another Comic</a></section></main></body>
+</html>

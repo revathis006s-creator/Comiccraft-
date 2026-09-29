@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{{ title }} - AI Comic Creator</title>
+<link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<main class="page-shell">
+<section class="hero"><div class="badge">✨ AI COMIC CREATOR</div><h1>ComicCraft</h1><p>Turn your imagination into a complete AI-generated comic.</p></section>
+{% if error %}<div class="alert error">{{ error }}</div>{% endif %}
+<form class="card form-card" action="/generate" method="post">
+<label for="story_prompt">Story Prompt</label>
+<textarea id="story_prompt" name="story_prompt" rows="5" placeholder="A brave fox exploring an enchanted forest..." required></textarea>
+<div class="grid two">
+<div><label for="character_name">Main Character Name</label><input id="character_name" name="character_name" placeholder="Arin" required></div>
+<div><label for="setting">Setting</label><select id="setting" name="setting"><option>Enchanted Forest</option><option>School</option><option>Futuristic City</option><option>Outer Space</option><option>Village</option></select></div>
+</div>
+<div class="grid two">
+<div><label for="tone">Story Tone</label><select id="tone" name="tone"><option>Light-hearted</option><option>Dramatic</option><option>Funny</option><option>Poetic</option><option>Adventure</option></select></div>
+<div><label for="art_style">Art Style</label><select id="art_style" name="art_style"><option>Comic Book</option><option>Anime</option><option>Pixel Art</option><option>Watercolor</option><option>Realistic</option></select></div>
+</div>
+<button class="button primary" type="submit">🚀 Generate My Comic</button>
+<p class="hint">Gemini creates the story and the image generator creates the artwork.</p>
+</form>
+</main>
+</body>
+</html>
